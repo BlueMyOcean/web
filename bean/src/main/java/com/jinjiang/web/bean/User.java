@@ -12,31 +12,33 @@ import java.util.Date;
 public class User {
 
     private Integer id;//默认id
-    @Size(min = 2,max=5)
+    @Size(min = 2,max=5,message ="姓名必须为4到10个字节，自己猜多少个字-。-")
     private String name;//姓名
     @NotNull
-    @Size(min=9,max=9)
+    @Size(min=9,max=9,message ="学号必须为9位，居然自己学号都不记得了= =" )
     private String sno;//学号
-    @Size(min=3,max=30)
+    @Size(min=2,max=30,message = "童鞋，基本信息还是要填滴~")
     private String major;//专业
-    @Size(min=4,max=4)
+    @Size(min=4,max=4,message = "4个数字,比我我是2014级的- -")
     private String grade;//年级
-    @Size(min=1,max=2)
+    @Size(min=1,max=2,message = "哇，咱学院的班级能超两位数哎！0.0崛起了啊！")
     private String clas;//班级
-    @Size(min=1,max=2)
+    @Size(min=1,max=2,message = "男，女，未知 - -")
     private String sex;//性别
-    @Size(min=1,max=12)
+    @Size(min=1,max=12,message = "大哥- =，咱别非主流了行吗？12个字够了！")
     private String nickname;//昵称
     @NotNull
-    @Size(min=5,max=30)
+    @Size(min=5,max=30,message = "最多25个字节，自己掂量- -")
     private String username;//用户名
     @NotNull
-    @Size(min=8,max=30)
+    @Size(min=8,max=30,message = "8至30位，别折腾了，谁盗你号啊- -")
     private String password;//密码
-    @Size(max=50)
+    @Size(max=50,message ="{pernature.size}")
     private String pernature;//个性签名
+    @NotNull
+    @Size(max = 50,message = "邮箱都没有？太low了吧！= =")
     private String email;//邮箱
-    @Size(max=13)
+    @Size(max=13,message = "你的QQ号一定是珍惜物种0 0！小于5位和大于13位的QQ号我还没见过！")
     private String qq;//qq号
     private Integer point;//积分
     private Date registerdate;//注册日期

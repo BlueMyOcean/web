@@ -34,11 +34,10 @@ public class IndexController {
         this.userService =  userService;
     }
 
-    @RequestMapping(value = "/register",method = RequestMethod.GET)
-    public String showRegisterForm(Model model)
+    @RequestMapping(value = "/search/bing" ,method = RequestMethod.GET)
+    public String search(@RequestParam("searchfor")String searchfor)
     {
-        model.addAttribute(new User());
-        return "register";
+           return "redirect:https://www.baidu.com/s?word="+searchfor+"&tn=sitehao123_10_pg&ie=utf-8";
     }
 
     @RequestMapping(value = "/register",method = RequestMethod.POST)
@@ -46,7 +45,7 @@ public class IndexController {
     {
         if(errors.hasErrors())
         {
-            return "register";
+            return "index/index";
         }
         user.setIpadress(request.getRemoteAddr());
         user.setPernature("无");
@@ -60,21 +59,22 @@ public class IndexController {
     public String showUserInfo(@PathVariable String username, Model model)
     {
         User user = userService.FindUser(username);
-        if(user!=null)
-        model.addAttribute(user);
-        return "userinfo";
+        if(user!=null) {
+            model.addAttribute(user);
+            return "userinfo";
+        }
+        else
+        {
+            model.addAttribute(username);
+            return "404";
+        }
     }
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
-    public String home(HttpServletRequest request,HttpServletResponse response)
+    public String home(HttpServletRequest request,HttpServletResponse response,Model model)
     {
+        model.addAttribute(new User());
         return "index/index";
-    }
-
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
-    public String login()
-    {
-        return "login";
     }
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
@@ -87,6 +87,6 @@ public class IndexController {
         if(getUser != null)
             return "redirect:/"+getUser.getUsername();
         else
-            return null;
+            return "login";
     }
 }

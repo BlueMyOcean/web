@@ -238,8 +238,6 @@
     <packaging>pom</packaging>
     <build>
         <plugins>
-            <!-- 指定Maven编译插件，如果不设置，它就会用maven-compiler-plugin默认的jdk版本来进行处理 -->
-            <!-- 这样就容易出现版本不匹配的问题，以至于可能导致编译不通过的问题 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -255,11 +253,6 @@
                     </compilerArguments>
                 </configuration>
             </plugin>
-            <!--  maven-resources-plugin则用来处理资源文件。默认的主资源文件目录是src/main/resources，
-            很多用户会需要添加额外的资源文件目录，这个时候就可以通过配置maven-resources-plugin来实现。
-            此外，资源文件过滤也是Maven的一大特性，你可以在资源文件中使用${propertyName}形式的Maven属性，
-            然后配置maven-resources-plugin开启对资源文件的过滤，之后就可以针对不同环境通过命令行或者Profile传入属性的值，
-            以实现更为灵活的构建。  -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
