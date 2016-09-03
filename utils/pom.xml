@@ -11,5 +11,12 @@
 
     <artifactId>utils</artifactId>
 
+    <dependencies>
+    <dependency>
+        <groupId>com.jinjiang.web</groupId>
+        <artifactId>bean</artifactId>
+        <version>${project.version}</version>
+    </dependency>
 
+    </dependencies>
 </project>

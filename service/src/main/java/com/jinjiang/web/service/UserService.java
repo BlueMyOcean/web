@@ -3,63 +3,59 @@ package com.jinjiang.web.service;
 import com.jinjiang.web.bean.User;
 import com.jinjiang.web.dao.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.Serializable;
 
 /**
  * Created by W on 2016/8/27.
  */
-//
-@Service
-public class UserService implements Serializable{
 
-    @Autowired
+@Service
+public class UserService{
     private UserMapper userMapper;
+    @Autowired
+    public void setUserMapper(UserMapper userMapper)
+    {
+        this.userMapper = userMapper;
+    }
+
 
     @Transactional
-    public String Login(User user)
-    {
-        try {
+    public User Login(User user) {
+
             User localuser = userMapper.findUserByUsername(user.getUsername());
-            if(localuser.getPassword().equals(user.getPassword()))
-                return "LoginSucceed";
+            if (localuser == null)
+                return null;
+            if (localuser.getPassword().equals(user.getPassword()))
+                return localuser;
             else
-                return "PasswordError";
-        }catch (Exception e) {
-                return "LoginFail";
-        }
+                return null;
     }
 
     @Transactional
-    public String Register(User user)
+    public User Register(User user)
     {
         User localuser = userMapper.findUserByUsername(user.getUsername());
         if(localuser!=null)
-            return "UserExist";
-        else
-            try {
-                userMapper.insertUser(user);
-                return "InsertSucceed";
-            }catch (Exception e)
-            {
-                return "InsertFail";
-            }
-
-    }
-
-    @Transactional
-    public String Change(User user)
-    {
-        try{
-            userMapper.UpdateUser(user);
-            return "ChangeSucceed";
-        }catch (Exception e)
-        {
-            return "ChangeFail";
+            return null;
+        else {
+            userMapper.insertUser(user);
+            return user;
         }
     }
 
+    @Transactional
+    public User Change(User user)
+    {
+            userMapper.UpdateUser(user);
+            User newuser = userMapper.findUserByUsername(user.getUsername());
+            return user;
+    }
 
+    public User FindUser(String username)
+    {
+        return userMapper.findUserByUsername(username);
+    }
 }

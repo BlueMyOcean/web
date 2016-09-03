@@ -3,6 +3,7 @@ package com.jinjiang.web.bean;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import javax.validation.constraints.*;
 import java.util.Date;
 
 /**
@@ -11,21 +12,34 @@ import java.util.Date;
 public class User {
 
     private Integer id;//默认id
+    @Size(min = 2,max=5)
     private String name;//姓名
+    @NotNull
+    @Size(min=9,max=9)
     private String sno;//学号
+    @Size(min=3,max=30)
     private String major;//专业
+    @Size(min=4,max=4)
     private String grade;//年级
+    @Size(min=1,max=2)
     private String clas;//班级
+    @Size(min=1,max=2)
     private String sex;//性别
+    @Size(min=1,max=12)
     private String nickname;//昵称
+    @NotNull
+    @Size(min=5,max=30)
     private String username;//用户名
+    @NotNull
+    @Size(min=8,max=30)
     private String password;//密码
+    @Size(max=50)
     private String pernature;//个性签名
     private String email;//邮箱
+    @Size(max=13)
     private String qq;//qq号
     private Integer point;//积分
     private Date registerdate;//注册日期
-    private Date birthday;//生日
     private String ipadress;//注册的ip地址
 
     public String getQq() {
@@ -146,14 +160,6 @@ public class User {
 
     public void setRegisterdate(Date registerdate) {
         this.registerdate = registerdate;
-    }
-
-    public Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
     }
 
     public String getIpadress() {

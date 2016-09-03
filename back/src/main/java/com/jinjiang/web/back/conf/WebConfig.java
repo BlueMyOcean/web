@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(value = {"com.jinjiang.web.back.controller","com.jinjiang.web.service","com.jinjiang.web.bean"})
+@ComponentScan(basePackages = {"com.jinjiang.web.back.controller","com.jinjiang.web.service","com.jinjiang.web.bean"})
 @MapperScan("com.jinjiang.web.dao.mapper")
 public class WebConfig  extends WebMvcConfigurerAdapter{
     @Bean
@@ -25,6 +25,7 @@ public class WebConfig  extends WebMvcConfigurerAdapter{
         resolver.setPrefix("/WEB-INF/pages/");
         resolver.setSuffix(".jsp");
         resolver.setExposeContextBeansAsAttributes(true);
+        //resolver.setViewClass(JstlView.class);
         return resolver;
     }
 
