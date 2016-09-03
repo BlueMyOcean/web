@@ -1,0 +1,43 @@
+.modal{
+overflow: auto !important;
+} 
+#search{
+	position: absolute;
+	top: 30%;
+	left:25%;
+	display: inline-block;
+	margin: 0 auto;
+	height: 50px;
+	width: 50%;
+}
+#search input{
+	width:80%;
+	height: 50px;
+	float: left;
+	border-radius: 20px 0 0 20px;
+	outline: none;
+	background: rgba(0,0,0,0.4);
+	border: rgba(255,255,255,0.4);
+	}
+#search button{
+float: right;
+width: 20%;
+height: 50px;
+color:#BEBEBE;
+outline: none;
+background: rgba(0,0,0,0.5);
+border: rgba(0,0,0,0.5);	
+border-radius:0 20px 20px 0;
+}
+#search input[type=text]
+{
+	outline: none;
+	height:100%;
+	width:80%;
+	color:#BEBEBE;
+	font-size: large;
+}
+#search button:hover
+{
+	box-shadow: 1px 0 0 3px rgba(255,255,255,1);
+}
