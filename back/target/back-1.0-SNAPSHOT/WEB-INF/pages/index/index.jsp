@@ -27,7 +27,7 @@
 	</div>
 	</div>
 
-		<form action="/search/bing" method="get">
+		<form action="/search/baidu" method="get">
 		<div id="search">
 			<input type="text" name="searchfor" />
 			<button type="submit">搜索一下</button>

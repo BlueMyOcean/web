@@ -15,9 +15,16 @@ public class SessionOP {
 
     private HttpSession session;
 
+    public boolean IsNew(HttpServletRequest request)
+    {
+        session = request.getSession();
+        return session.isNew();
+    }
+
     public void setSession(User user, HttpServletRequest request)
     {
         session = request.getSession();
+        session.setMaxInactiveInterval(600);
         session.setAttribute("id",user.getId());
         session.setAttribute("name",user.getName());
         session.setAttribute("sno",user.getSno());
@@ -47,17 +54,25 @@ public class SessionOP {
         String major = (String) session.getAttribute("maojor");
         String grade = (String) session.getAttribute("grade");
         String clas = (String) session.getAttribute("clas");
-        String sex = (String) session.getAttribute("sex");
+        String sex;
+        if(session.getAttribute("sex")!=null)
+        sex = (String) session.getAttribute("sex");
+        else
+        sex="";
         String nickname = (String) session.getAttribute("nickname");
         String username = (String) session.getAttribute("username");
         String password = (String) session.getAttribute("password");
         String pernature = (String) session.getAttribute("pernature");
         String email = (String) session.getAttribute("email");
-        String qq = (String) session.getAttribute("qq");
+        String qq;
+        if(session.getAttribute("qq")!=null)
+        qq = (String) session.getAttribute("qq");
+        else
+        qq="";
         Integer point = (Integer) session.getAttribute("id");
         Date registerdate = (Date)session.getAttribute("registerdate");
         String ipadress = (String)session.getAttribute("ipadress");
-        if(id!=null && username!=null)
+        if(username!=null)
         {
             user.setId(id);
             user.setPassword(password);

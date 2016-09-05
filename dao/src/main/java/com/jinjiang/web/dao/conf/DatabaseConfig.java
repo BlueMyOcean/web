@@ -22,25 +22,25 @@ public class DatabaseConfig {
 
      //   private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
 
-        @Value("${jdbc.driver}")
+        @Value("${jdbc.driver}")//驱动
         private String jdbcDriver;
 
-        @Value("${db.url}")
+        @Value("${db.url}")//数据库连接
         private String dbUrl;
 
-        @Value("${db.username}")
+        @Value("${db.username}")//用户名
         private String username;
 
-        @Value("${db.password}")
+        @Value("${db.password}")//密码
         private String password;
 
-        @Value("${db.maxtotal}")
+        @Value("${db.maxtotal}")//最大活动连接数
         private String maxTotal;
 
-        @Value("${db.minidle}")
+        @Value("${db.minidle}")//最小连接数
         private String minIdle;
 
-        @Value("${db.maxidle}")
+        @Value("${db.maxidle}")//最大连接数
         private String maxIdle;
 
         @Bean(destroyMethod = "close")

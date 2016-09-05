@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.Date;
 
@@ -27,6 +28,12 @@ public class IndexController {
 
     //private UserService userService = new UserService();
 
+    private SessionOP sessionOP;
+    @Autowired
+    public void setSessionOP(SessionOP sessionOP)
+    {
+        this.sessionOP = sessionOP;
+    }
     private UserService userService;
     @Autowired
     public void setUserService(UserService userService)
@@ -34,7 +41,7 @@ public class IndexController {
         this.userService =  userService;
     }
 
-    @RequestMapping(value = "/search/bing" ,method = RequestMethod.GET)
+    @RequestMapping(value = "/search/baidu" ,method = RequestMethod.GET)
     public String search(@RequestParam("searchfor")String searchfor)
     {
            return "redirect:https://www.baidu.com/s?word="+searchfor+"&tn=sitehao123_10_pg&ie=utf-8";
@@ -52,6 +59,7 @@ public class IndexController {
         user.setPoint(0);
         user.setRegisterdate(new Date());
         userService.Register(user);
+        sessionOP.setSession(user,request);
         return "redirect:/"+user.getUsername();
     }
 
@@ -73,20 +81,34 @@ public class IndexController {
     @RequestMapping(value = "/",method = RequestMethod.GET)
     public String home(HttpServletRequest request,HttpServletResponse response,Model model)
     {
-        model.addAttribute(new User());
+        User user;
+        user = sessionOP.getSession(request);
+        if(user == null)
+            user = new User();
+        model.addAttribute("user",user);
         return "index/index";
     }
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String login(@RequestParam("username") String userName,
-                      @RequestParam("password") String password) {
+    public String login(@RequestParam("username") String username,
+                        @RequestParam("password") String password, HttpServletRequest request) {
             User checkUser = new User();
-            checkUser.setUsername(userName);
+            checkUser.setUsername(username);
             checkUser.setPassword(password);
             User getUser = userService.Login(checkUser);
-        if(getUser != null)
-            return "redirect:/"+getUser.getUsername();
+        if(getUser != null) {
+            sessionOP.setSession(getUser,request);
+            return "redirect:/" + getUser.getUsername();
+        }
         else
             return "login";
     }
+
+    @RequestMapping(value = "/logout",method = RequestMethod.GET)
+    public String logout(HttpServletRequest request)
+    {
+        sessionOP.destroySession(request);
+        return "redirect:index/index";
+    }
+
 }

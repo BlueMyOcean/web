@@ -26,8 +26,10 @@ public class UserService{
     public User Login(User user) {
 
             User localuser = userMapper.findUserByUsername(user.getUsername());
-            if (localuser == null)
+            if (localuser == null) {
+                System.out.printf("登录失败,不存在该用户！");
                 return null;
+            }
             if (localuser.getPassword().equals(user.getPassword()))
                 return localuser;
             else

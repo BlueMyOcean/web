@@ -19,6 +19,6 @@ public interface UserMapper {
     User findUserByUsername(@Param("username")String username);//根据用户名查找用户
     @Update("update user set id=#{id},name=#{name},sno=#{sno},major=#{major},grade=#{grade},clas=#{clas},sex=#{sex},nickname=#{{nickname},username=#{username},password=#{password},pernature=#{pernature},email=#{email},qq=#{qq},point=#{point},registerdate=#{registerdate},ipadress=#{ipadress} where username = #{username}")
     void UpdateUser(User user);//更新用户信息
-    @Delete("delete from user where username =#{username} ")
+    @Delete("delete from user where username =#{username}")
     void deleteUser(@Param("username")String username);//删除用户
 }

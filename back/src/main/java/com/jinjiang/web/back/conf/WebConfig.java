@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
  */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.jinjiang.web.back.controller","com.jinjiang.web.service","com.jinjiang.web.bean"})
+@ComponentScan(basePackages = {"com.jinjiang.web.back.controller","com.jinjiang.web.service","com.jinjiang.web.bean","com.jinjiang.web.utils"})
 @MapperScan("com.jinjiang.web.dao.mapper")
 public class WebConfig  extends WebMvcConfigurerAdapter{
     @Bean
