@@ -1,6 +1,7 @@
 <%@ page pageEncoding="UTF-8" contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,10 +10,17 @@
 		<link href="${pageContext.request.contextPath}/css/error.css" rel="stylesheet" type="text/css">
 	<link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
    <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-   <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+   <script src="${pageContext.request.contextPath}/js/bootstrap.min.js" ></script>
    <link href="${pageContext.request.contextPath}/css/common.css" rel="stylesheet" type="text/css" />
   <link href="${pageContext.request.contextPath}/css/index.css" rel="stylesheet" type="text/css" />
-	</head>
+	<script language="JavaScript" type="text/javascript">
+        function baidu(){
+            var search=document.getElementById("input");
+            window.location.href="https://www.baidu.com/s?wd="+search.value;
+        }
+    </script>
+
+    </head>
 	<body>
 		<img src="${pageContext.request.contextPath}/images/intro-bg1.jpg">
 	<div id="header">
@@ -20,19 +28,26 @@
 	<div>
 	<ul>
 	<li><a href="${pageContext.request.contextPath}/WEB-INF/pages/index2.html">更多</a></li>
+        <%! String name;String username;%>
+        <%= name= (String) session.getAttribute("nickname")%>
+        <%=username = (String)session.getAttribute("username")%>
+        <% if (name==null){ %>
 	<li><a  id="register"  data-toggle="modal" data-backdrop="static" data-target="#registerModal"><span class="glyphicon glyphicon-user"></span>注册</a></li>
 	<li><a id="logon" data-toggle="modal" data-backdrop="static" data-target="#logonModal"><span class="glyphicon glyphicon-log-in"></span> 登陆</a></li>
-	<li><a href="${pageContext.request.contextPath}/WEB-INF/pages/index/index.jsp" class="active">首页</a></li>
+        <% } else{%>
+        <li><a  id="logout"  data-toggle="modal" data-backdrop="static" href="<s:url value="/logout"/>"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
+        <li><a  id="nickname"  data-toggle="modal" data-backdrop="static" href=" <s:url value="/{username}"><s:param name="username" value="<%=username%>"/> </s:url> "><span class="glyphicon glyphicon-user"></span><%= name%></a></li>
+        <%}%>
+	<li><a href="/" class="active">首页</a></li>
 	</ul>
 	</div>
 	</div>
 
-		<form action="/search/baidu" method="get">
+
 		<div id="search">
-			<input type="text" name="searchfor" />
-			<button type="submit">搜索一下</button>
+			<input type="text" id="input" />
+			<button type="button" onclick=baidu()>搜索一下</button>
 		</div>
-		</form>
 
 <div id="registerModal" class="modal fade">
 	<div class="modal-dialog">
@@ -60,7 +75,7 @@
 			<div class="form-group">
 			<label class="control-label col-md-3 col-sm-2">密　码：</label>
 			<div class="col-md-8 col-sm-10">
-				<sf:input path="password" cssClass="form-control" />
+				<sf:input path="password" type="password" cssClass="form-control" />
 				<sf:errors path="password" cssClass="error"  /><br/>
 			</div>
 			</div>

@@ -40,13 +40,13 @@ public class IndexController {
     {
         this.userService =  userService;
     }
-
+/*
     @RequestMapping(value = "/search/baidu" ,method = RequestMethod.GET)
     public String search(@RequestParam("searchfor")String searchfor)
     {
-           return "redirect:https://www.baidu.com/s?word="+searchfor+"&tn=sitehao123_10_pg&ie=utf-8";
+           return "redirect:https://www.baidu.com/s?word="+searchfor+"&ie=utf-8";
     }
-
+*/
     @RequestMapping(value = "/register",method = RequestMethod.POST)
     public String regist( @Valid User user, Errors errors ,HttpServletRequest request)
     {
@@ -91,24 +91,27 @@ public class IndexController {
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(@RequestParam("username") String username,
-                        @RequestParam("password") String password, HttpServletRequest request) {
+                        @RequestParam("password") String password, HttpServletRequest request,Model model) {
             User checkUser = new User();
             checkUser.setUsername(username);
             checkUser.setPassword(password);
             User getUser = userService.Login(checkUser);
         if(getUser != null) {
             sessionOP.setSession(getUser,request);
-            return "redirect:/" + getUser.getUsername();
+            model.addAttribute("user",getUser);
+            return "redirect:/";
         }
         else
             return "login";
     }
 
     @RequestMapping(value = "/logout",method = RequestMethod.GET)
-    public String logout(HttpServletRequest request)
+    public String logout(HttpServletRequest request,Model model)
     {
+
         sessionOP.destroySession(request);
-        return "redirect:index/index";
+        model.addAttribute(new User());
+        return "redirect:"+request.getContextPath()+"/";
     }
 
 }

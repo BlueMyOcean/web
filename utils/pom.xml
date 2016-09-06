@@ -18,5 +18,13 @@
         <version>${project.version}</version>
     </dependency>
 
+        <!-- https://mvnrepository.com/artifact/javamail/javamail -->
+        <dependency>
+            <groupId>javamail</groupId>
+            <artifactId>javamail</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
+
     </dependencies>
 </project>
