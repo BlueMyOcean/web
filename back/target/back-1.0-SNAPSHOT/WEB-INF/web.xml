@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <!--xml配置的编码过滤器
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -20,6 +21,88 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    -->
+
+
+    <!-- 完全配置文件的spring mvc
+
+    配置根上下文配置文件配置
+     <context-param>
+         <param-name>contextConfigLocation</param-name>
+         <param-value>WEB-INF/路径</param-value>
+     </context-param>
+ 注册ContextLoaderListener
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    配置DispatcherServlet
+    <servlet>
+        <servlet-name>appservlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>
+        1
+        </load-on-startup>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/dispatcher配置文件处</param-value>
+        </init-param>
+    </servlet>
+    映射dispatherServlet
+    <servlet-mapping>
+        <servlet-name>appservlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+-->
+
+    <!--xml初始化   java config配置-->
+
+    <!-- xml初始化contextloaderlistner 和 dispatcher
+    声明配置类引用名和路径
+    <context-param>
+        <param-name>
+            contextClass
+        </param-name>
+        <param-value>
+            org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+        </param-value>
+    </context-param>
+
+    加载rootconifg
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>com.jinjiang.web.xx/rootconfig类的位置</param-value>
+    </context-param>
+
+    加载contextloaderlistner
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+
+    配置dispatcher并声明由anntation来实现
+    <servlet>
+        <servlet-name>appservlet</servlet-name>
+        <servlet-class>
+            org.springframework.web.servlet.DispatcherServlet
+        </servlet-class>
+        <init-param>
+            <param-name>
+                contextClass
+            </param-name>
+            <param-value>
+                org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+            </param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>appservlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+-->
     <error-page>
         <error-code>404</error-code>
         <location>/WEB-INF/pages/404.jsp</location>

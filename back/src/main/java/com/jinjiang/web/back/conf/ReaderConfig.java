@@ -6,6 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
+
+import java.io.IOException;
 
 /**
  * Created by W on 2016/8/25.
@@ -25,5 +29,10 @@ public class ReaderConfig {
         ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
         messageSource.setBasename("message");
         return messageSource;
+    }
+
+    @Bean
+    public MultipartResolver multipartResolver() throws IOException{
+        return new StandardServletMultipartResolver();
     }
 }

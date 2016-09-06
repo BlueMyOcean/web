@@ -79,9 +79,17 @@
 				<sf:errors path="password" cssClass="error"  /><br/>
 			</div>
 			</div>
+
+				<div class="form-group">
+					<label class="control-label col-md-3 col-sm-2">姓  名：</label>
+					<div class="col-md-8 col-sm-10">
+						<sf:input path="name" cssClass="form-control" />
+						<sf:errors path="name" cssClass="error" /><br/>
+					</div>
+				</div>
 			
 			<div class="form-group">
-			<label class="control-label col-md-3 col-sm-2">学　号：</label>
+			<label class="control-label col-md-3 col-sm-2">学  号：</label>
 			<div class="col-md-8 col-sm-10">
 				<sf:input path="sno" cssClass="form-control" />
 				<sf:errors path="sno" cssClass="error" /><br/>
@@ -186,7 +194,7 @@
 								<span class="input-group-btn">
 									<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-lock"></span>  </button>
 								</span>
-								<input type="text" class="form-control" name="password"/>
+								<input type="password" class="form-control" name="password"/>
 							</div>
 						</div>
 					</div>
