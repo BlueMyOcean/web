@@ -7,6 +7,11 @@
           <element id="module-output" name="back" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="utils-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="utils" />
+          </element>
+          <element id="library" level="project" name="Maven: javax.mail:javax.mail-api:1.4.6" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1.1" />
           <element id="archive" name="service-1.0-SNAPSHOT.jar">
             <element id="module-output" name="service" />
           </element>
@@ -15,9 +20,6 @@
           </element>
           <element id="archive" name="bean-1.0-SNAPSHOT.jar">
             <element id="module-output" name="bean" />
-          </element>
-          <element id="archive" name="utils-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="utils" />
           </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.1.6.RELEASE" />
