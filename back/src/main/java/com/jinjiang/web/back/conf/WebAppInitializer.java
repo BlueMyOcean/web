@@ -10,6 +10,7 @@ import javax.servlet.ServletRegistration;
 
 /**
  * Created by W on 2016/8/25.
+ *
  */
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
@@ -27,9 +28,10 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
         return new String[]{"/"};
     }
 
+    //dispatcher的multipart配置方法
     @Override
     protected void customizeRegistration(ServletRegistration.Dynamic registration) {
-        registration.setMultipartConfig(new MultipartConfigElement("/uploads",2097152,4100000,0));
+        registration.setMultipartConfig(new MultipartConfigElement("/usr/files/",2097152,4100000,0));
     }
 
     @Override

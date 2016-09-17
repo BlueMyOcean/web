@@ -35,8 +35,8 @@
 	<li><a  id="register"  data-toggle="modal" data-backdrop="static" data-target="#registerModal"><span class="glyphicon glyphicon-user"></span>注册</a></li>
 	<li><a id="logon" data-toggle="modal" data-backdrop="static" data-target="#logonModal"><span class="glyphicon glyphicon-log-in"></span> 登陆</a></li>
         <% } else{%>
-        <li><a  id="logout"  data-toggle="modal" data-backdrop="static" href="<s:url value="/logout"/>"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
-        <li><a  id="nickname"  data-toggle="modal" data-backdrop="static" href=" <s:url value="/{username}"><s:param name="username" value="<%=username%>"/> </s:url> "><span class="glyphicon glyphicon-user"></span><%= name%></a></li>
+        <li><a  id="logout"  data-toggle="modal" data-backdrop="static" href="<s:url value="/user/logout"/>"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
+        <li><a  id="nickname"  data-toggle="modal" data-backdrop="static" href=" <s:url value="/user/{username}"><s:param name="username" value="<%=username%>"/> </s:url> "><span class="glyphicon glyphicon-user"></span><%= name%></a></li>
         <%}%>
 	<li><a href="/" class="active">首页</a></li>
 	</ul>
@@ -63,7 +63,7 @@
 
 			<!--注册-->
 			<div class="modal-body">
-			<sf:form method="post" action="/register" cssClass="form-horizontal" commandName="user">
+			<sf:form method="post" action="${pageContext.request.contextPath}/user/register" cssClass="form-horizontal" commandName="user">
 			<div class="form-group">
 			<label class="control-label col-md-3 col-sm-2">用户名：</label>
 			<div class="col-md-8 col-sm-10">
@@ -175,7 +175,7 @@
 			<div class="col-md-4">
 			</div>
 			<div class="col-md-8">
-				<form class="form-horizontal" action="/login" method="post">
+				<form class="form-horizontal" action="${pageContext.request.contextPath}/user/login" method="post">
 					<div class="form-group">
 						<label class="control-label col-md-3 col-sm-3" >用户名：</label>
 						<div class="col-md-8 col-sm-8">

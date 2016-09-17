@@ -34,7 +34,7 @@
     qq:<input type="text" name ="qq" /><br/>
     <input type="submit" value="注册" />
 </form>-->
-<sf:form method="post"  commandName="user">
+<sf:form method="post" action="/user/register" commandName="user">
     姓名:<sf:input path ="name" /><sf:errors path="name"  cssClass="error"/><br/>
     学号:<sf:input path="sno" /><sf:errors path="sno" cssClass="error" /><br/>
     专业:<sf:input path="major" /><sf:errors path="major"  cssClass="error"/><br/>

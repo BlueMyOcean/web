@@ -13,7 +13,7 @@
 </head>
 <body>
 欢迎来到创新实验室首页！
-<form method="post">
+<form method="post" action="/user/login">
     用户名:<input type="text" name="username"/>
     密 码：<input type="password" name="password"/>
     <input type="submit" value="登录"/>

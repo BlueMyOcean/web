@@ -96,13 +96,24 @@
             </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
+        //xml配置multipart方式servlet3.0+
+        <multipart-config>
+            <location>/uploads</location>
+            <max-file-size></max-file-size>
+            <max-request-size></max-request-size>
+            </multipart-config>
+       //
     </servlet>
 
     <servlet-mapping>
         <servlet-name>appservlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
--->
+
+
+
+   -->
+
     <error-page>
         <error-code>404</error-code>
         <location>/WEB-INF/pages/404.jsp</location>

@@ -11,5 +11,13 @@
 
     <artifactId>task</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.jinjiang.web</groupId>
+            <artifactId>utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
