@@ -16,7 +16,6 @@ import java.io.IOException;
  * Created by W on 2016/8/25.
  */
 @Configuration
-//@ImportResource("classpath:SpringWebFlowConfig.xml")
 @PropertySource(value = {"classpath:database.properties","classpath:ValidationMessages.properties"})
 public class ReaderConfig {
     //解析占位符 获得数据库参数文件

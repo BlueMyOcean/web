@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+
+    <var name="userinfo" class="com.jinjiang.web.bean.bean.UserPrivilege"/>
+
+    <subflow-state id="getuserinfo" subflow="pointsexchange/getuserinfo">
+        <output name="userinfo" value="payinfo"/>
+        <transition on="userinfoReady" to="getpayinfo"/>
+    </subflow-state>
+
+    <var name="payinfo" class="com.jinjiang.web.bean.pojo.PaymentDetails"/>
+
+    <subflow-state id="getpayinfo" subflow="pointsexchange/getpayinfo">
+        <output name="payinfo" value="payinfo"/>
+        <transition on="payinfoReady" to="judgePoints"/>
+    </subflow-state>
+
+    <decision-state id="judgePoints" >
+        <if test="userPrivilegeServiceImp.judgePoints(payinfo,userinfo)"
+            then="savePrivilege"
+            else="pointsnotenough"/>
+    </decision-state>
+
+    <action-state id="savePrivilege" >
+        <evaluate expression="userPrivilegeServiceImp.addUserPrivilege(payinfo,userinfo)" />
+    </action-state>
+
+    <view-state id="pointsnotenough">
+        <transition on="retry" to="getpayinfo" />
+    </view-state>
+
+    <view-state id="useraddsucceed" redirect="true">
+        <transition to="complete"/>
+   </view-state>
+
+    <end-state id="complete" />
+    <global-transitions>
+        <transition on="cancel" to="complete"/>
+    </global-transitions>
+
+    
+</flow>

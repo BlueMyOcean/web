@@ -1,7 +1,8 @@
 package com.jinjiang.web.back.controller;
 
-import com.jinjiang.web.bean.User;
-import com.jinjiang.web.service.UserService;
+import com.jinjiang.web.bean.bean.User;
+import com.jinjiang.web.exception.DuplicateUserNameException;
+import com.jinjiang.web.service.UserServiceImp;
 import com.jinjiang.web.utils.SessionOP;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,11 +30,11 @@ public class UserController {
     {
         this.sessionOP = sessionOP;
     }
-    private UserService userService;
+    private UserServiceImp userServiceImp;
     @Autowired
-    public void setUserService(UserService userService)
+    public void setUserServiceImp(UserServiceImp userServiceImp)
     {
-        this.userService =  userService;
+        this.userServiceImp = userServiceImp;
     }
 
     @RequestMapping(value = "/register",method = RequestMethod.POST)
@@ -47,7 +48,10 @@ public class UserController {
         user.setPernature("无");
         user.setPoint(0);
         user.setRegisterdate(new Date());
-        userService.Register(user);
+
+        if(userServiceImp.Register(user)==null)
+            throw new DuplicateUserNameException();
+
         sessionOP.setSession(user,request);
         return "redirect:/user/"+user.getUsername();
     }
@@ -55,7 +59,7 @@ public class UserController {
     @RequestMapping(value = "/{username}",method = RequestMethod.GET)
     public String showUserInfo(@PathVariable String username, Model model)
     {
-        User user = userService.FindUser(username);
+        User user = userServiceImp.FindUser(username);
         if(user!=null) {
             model.addAttribute(user);
             return "userinfo";
@@ -73,7 +77,7 @@ public class UserController {
         User checkUser = new User();
         checkUser.setUsername(username);
         checkUser.setPassword(password);
-        User getUser = userService.Login(checkUser);
+        User getUser = userServiceImp.Login(checkUser);
         if(getUser != null) {
             sessionOP.setSession(getUser,request);
             model.addAttribute("user",getUser);

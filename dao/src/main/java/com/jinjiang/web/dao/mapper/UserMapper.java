@@ -1,10 +1,8 @@
 package com.jinjiang.web.dao.mapper;
 
-import com.jinjiang.web.bean.User;
+import com.jinjiang.web.bean.bean.User;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
-
-import javax.annotation.Resource;
 
 /**
  * Created by W on 2016/8/26.

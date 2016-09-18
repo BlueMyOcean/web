@@ -1,4 +1,4 @@
-package com.jinjiang.web.bean;
+package com.jinjiang.web.bean.bean;
 
 /**
  * Created by W on 2016/8/26.

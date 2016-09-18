@@ -1,4 +1,4 @@
-package com.jinjiang.web.bean;
+package com.jinjiang.web.bean.bean;
 
 import java.util.Date;
 

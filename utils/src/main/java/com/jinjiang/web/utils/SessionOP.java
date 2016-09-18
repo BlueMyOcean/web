@@ -1,6 +1,6 @@
 package com.jinjiang.web.utils;
 
-import com.jinjiang.web.bean.User;
+import com.jinjiang.web.bean.bean.User;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;

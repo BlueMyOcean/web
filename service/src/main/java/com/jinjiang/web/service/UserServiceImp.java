@@ -1,9 +1,9 @@
 package com.jinjiang.web.service;
 
-import com.jinjiang.web.bean.User;
+import com.jinjiang.web.bean.bean.User;
 import com.jinjiang.web.dao.mapper.UserMapper;
+import com.jinjiang.web.service.inf.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 
 @Service
-public class UserService{
+public class UserServiceImp implements UserService{
     private UserMapper userMapper;
     @Autowired
     public void setUserMapper(UserMapper userMapper)
@@ -23,6 +23,7 @@ public class UserService{
 
 
     @Transactional
+    @Override
     public User Login(User user) {
 
             User localuser = userMapper.findUserByUsername(user.getUsername());
@@ -37,6 +38,7 @@ public class UserService{
     }
 
     @Transactional
+    @Override
     public User Register(User user)
     {
         User localuser = userMapper.findUserByUsername(user.getUsername());
@@ -49,6 +51,7 @@ public class UserService{
     }
 
     @Transactional
+    @Override
     public User Change(User user)
     {
             userMapper.UpdateUser(user);
@@ -56,6 +59,7 @@ public class UserService{
             return user;
     }
 
+    @Override
     public User FindUser(String username)
     {
         return userMapper.findUserByUsername(username);
