@@ -2,6 +2,7 @@ package com.jinjiang.web.back.controller;
 
 import com.jinjiang.web.bean.bean.User;
 import com.jinjiang.web.exception.DuplicateUserNameException;
+import com.jinjiang.web.exception.ErrorUserNameOrPasswordException;
 import com.jinjiang.web.service.UserServiceImp;
 import com.jinjiang.web.utils.SessionOP;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +39,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/register",method = RequestMethod.POST)
-    public String regist(@Valid User user, Errors errors , HttpServletRequest request)
+    public String regist(@Valid User user, Errors errors , HttpServletRequest request) throws  DuplicateUserNameException
     {
         if(errors.hasErrors())
         {
@@ -73,7 +74,8 @@ public class UserController {
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(@RequestParam("username") String username,
-                        @RequestParam("password") String password, HttpServletRequest request,Model model) {
+                        @RequestParam("password") String password, HttpServletRequest request,Model model)throws  ErrorUserNameOrPasswordException
+    {
         User checkUser = new User();
         checkUser.setUsername(username);
         checkUser.setPassword(password);
@@ -83,8 +85,9 @@ public class UserController {
             model.addAttribute("user",getUser);
             return "redirect:/";
         }
-        else
-            return "login";
+        else {
+            throw new ErrorUserNameOrPasswordException();
+        }
     }
 
     @RequestMapping(value = "/logout",method = RequestMethod.GET)

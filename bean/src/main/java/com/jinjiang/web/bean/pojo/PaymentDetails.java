@@ -11,5 +11,7 @@ public class PaymentDetails implements Serializable{
     //权限等级
     private int level;
     //连续签到天数>200
-    private boolean hardwork;
+    private int hardwork=200;
+
+
 }

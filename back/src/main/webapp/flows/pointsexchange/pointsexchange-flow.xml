@@ -5,13 +5,14 @@
 
 
     <var name="userinfo" class="com.jinjiang.web.bean.bean.UserPrivilege"/>
+    <var name="payinfo" class="com.jinjiang.web.bean.pojo.PaymentDetails"/>
 
     <subflow-state id="getuserinfo" subflow="pointsexchange/getuserinfo">
         <output name="userinfo" value="payinfo"/>
         <transition on="userinfoReady" to="getpayinfo"/>
     </subflow-state>
 
-    <var name="payinfo" class="com.jinjiang.web.bean.pojo.PaymentDetails"/>
+
 
     <subflow-state id="getpayinfo" subflow="pointsexchange/getpayinfo">
         <output name="payinfo" value="payinfo"/>

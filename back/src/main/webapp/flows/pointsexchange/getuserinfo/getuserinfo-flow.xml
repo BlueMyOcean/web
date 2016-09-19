@@ -3,16 +3,24 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
+    <var class="com.jinjiang.web.bean.bean.UserPrivilege" name="privilegeinfo"/>
+
     <view-state id="index/index" >
-        <b
+        <transition on="login" to="getPrivilegeInfo" />
+        <transition on-exception="com.jinjiang.web.exception.ErrorUserNameOrPasswordException" to="index/index" />
     </view-state>
     
     <action-state id="getPrivilegeInfo" >
-        <evaluate expression=""
+        <evaluate result="privilegeinfo" expression="request2Privilege.convert(requestParameters.num)"/>
     </action-state>
-    
-    <decision-state id="ifuserlogin" >
-        <if test="" then=""
-    </decision-state>
-    
+
+  <end-state id="cancel" />
+
+    <end-state id="userinfoReady" >
+        <output name="privilegeinfo" />
+    </end-state>
+
+    <global-transitions>
+        <transition on="cancel" to="cancel"/>
+    </global-transitions>
 </flow>

@@ -6,56 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a075809-f250-4cf6-87cb-7d2ca2af9658" name="Default" comment="eighth commit:upload function">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__opensymphony_ognl_2_6_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_binding_2_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_js_2_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_js_resources_2_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_webflow_spring_webflow_2_4_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back/src/main/webapp/WEB-INF/pages/error/userexisted.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getpayinfo/getpayinfo-flow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getuserinfo/getuserinfo-flow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsexchange-flow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsnotenough.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/ponitstore.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/useraddsucceed.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/UserPrivilege.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/pojo/PaymentDetails.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/src/main/java/com/jinjiang/web/dao/mapper/UserPrivilegeMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/UserPrivilegeServiceImp.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/inf/SignService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/inf/UserPrivilegeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/inf/UserService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/Administrator.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/Administrator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/Message.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/Message.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/SignData.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/SignData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/User.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/SignService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/SignServiceImp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/UserService.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/UserServiceImp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/back_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/back_war_exploded.xml" />
+    <list default="true" id="4a075809-f250-4cf6-87cb-7d2ca2af9658" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/back/src/main/webapp/WEB-INF/pages/error/usernameorpawdwrong.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/ErrorUserNameOrPasswordException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/Request2Privilege.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/ponitstore.jsp" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getpayinfo/pointstore.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/back.iml" afterPath="$PROJECT_DIR$/back/back.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/conf/ReaderConfig.java" afterPath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/conf/ReaderConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/conf/RootConfig.java" afterPath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/conf/RootConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/conf/WebAppInitializer.java" afterPath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/conf/WebAppInitializer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/conf/WebConfig.java" afterPath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/conf/WebConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/ExceptionHandle.java" afterPath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/ExceptionHandle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/IndexController.java" afterPath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/IndexController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UserController.java" afterPath="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/resources/SpringWebFlowConfig.xml" afterPath="$PROJECT_DIR$/back/src/main/resources/SpringWebFlowConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/resources/email.properties" afterPath="$PROJECT_DIR$/back/src/main/resources/email.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bean/bean.iml" afterPath="$PROJECT_DIR$/bean/bean.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache/cache.iml" afterPath="$PROJECT_DIR$/cache/cache.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/dao.iml" afterPath="$PROJECT_DIR$/dao/dao.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/src/main/java/com/jinjiang/web/dao/mapper/SignMapper.java" afterPath="$PROJECT_DIR$/dao/src/main/java/com/jinjiang/web/dao/mapper/SignMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/src/main/java/com/jinjiang/web/dao/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/dao/src/main/java/com/jinjiang/web/dao/mapper/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/service.iml" afterPath="$PROJECT_DIR$/service/service.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task/task.iml" afterPath="$PROJECT_DIR$/task/task.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/SessionOP.java" afterPath="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/SessionOP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/utils.iml" afterPath="$PROJECT_DIR$/utils/utils.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web.iml" afterPath="$PROJECT_DIR$/web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getpayinfo/getpayinfo-flow.xml" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getpayinfo/getpayinfo-flow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getuserinfo/getuserinfo-flow.xml" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getuserinfo/getuserinfo-flow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsexchange-flow.xml" afterPath="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsexchange-flow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/pojo/PaymentDetails.java" afterPath="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/pojo/PaymentDetails.java" />
     </list>
     <ignored path="web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,16 +50,6 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - sign@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="DockManager">
     <window id="1">
@@ -106,8 +59,41 @@
             <file leaf-file-name="pointsexchange-flow.xml" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsexchange-flow.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="799">
-                    <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+                  <state relative-caret-position="403">
+                    <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="UserPrivilegeServiceImp.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/UserPrivilegeServiceImp.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="427">
+                    <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                    <folding>
+                      <element signature="e#503#504#0" expanded="true" />
+                      <element signature="e#531#532#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="UserPrivilege.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/UserPrivilege.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="217">
+                    <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="PaymentDetails.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/pojo/PaymentDetails.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="279">
+                    <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
                     <folding />
                   </state>
                 </provider>
@@ -124,95 +110,107 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/jinjiang/web/dao/mapper/UserMapper.java">
+      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UploadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserPrivilegeServiceImp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/UserPrivilegeServiceImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            <state relative-caret-position="451">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserPrivilegeService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/inf/UserPrivilegeService.java">
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+            <state relative-caret-position="171">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignServiceImp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/SignServiceImp.java">
+      <file leaf-file-name="getuserinfo-flow.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getuserinfo/getuserinfo-flow.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state relative-caret-position="589">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getpayinfo-flow.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getpayinfo-flow.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getpayinfo/getpayinfo-flow.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="155">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getuserinfo-flow.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getuserinfo/getuserinfo-flow.xml">
+      <file leaf-file-name="Request2Privilege.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/Request2Privilege.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="169">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#305#306#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pointsnotenough.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsnotenough.jsp">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="-124">
+              <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserPrivilegeMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/jinjiang/web/dao/mapper/UserPrivilegeMapper.java">
+      <file leaf-file-name="DuplicateUserNameException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/DuplicateUserNameException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="217">
+              <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ponitstore.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/ponitstore.jsp">
+      <file leaf-file-name="ExceptionHandle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/ExceptionHandle.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="403">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pointstore.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getpayinfo/pointstore.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/AdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -227,8 +225,8 @@
         <option value="CSS File" />
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="webflow.2_0" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -249,11 +247,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/StoreUnQulifiedUser.java" />
-        <option value="$PROJECT_DIR$/task/pom.xml" />
-        <option value="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/Email.java" />
-        <option value="$PROJECT_DIR$/task/src/main/java/com/jinjiang/web/task/EmailTask.java" />
-        <option value="$PROJECT_DIR$/dao/src/main/java/com/jinjiang/web/dao/mapper/SignMapper.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/UserNotFound.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/UserAlreadyExist.java" />
         <option value="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/DuplicateUserNameException.java" />
@@ -271,9 +264,7 @@
         <option value="$PROJECT_DIR$/back/src/main/resources/database.properties" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/AdminController.java" />
         <option value="$PROJECT_DIR$/back/src/main/resources/email.properties" />
-        <option value="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UserController.java" />
         <option value="$PROJECT_DIR$/back/src/main/webapp/WEB-INF/pages/error/userexisted.jsp" />
-        <option value="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/ExceptionHandle.java" />
         <option value="$PROJECT_DIR$/back/src/main/webapp/flows/pointsget-flow.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/back/src/main/webapp/WEB-INF/pages/pointsexchange/ponitstore.jsp" />
@@ -294,12 +285,19 @@
         <option value="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/UserPrivilege.java" />
         <option value="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/useraddsucceed.jsp" />
         <option value="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointnotenough.jsp" />
-        <option value="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/pojo/PaymentDetails.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/inf/UserPrivilegeService.java" />
         <option value="$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/UserPrivilegeServiceImp.java" />
-        <option value="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsexchange-flow.xml" />
         <option value="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/action/LoginAction.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/ErrorUserNameOrPassword.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/ErrorUserNameOrPasswordException.java" />
+        <option value="$PROJECT_DIR$/back/src/main/webapp/WEB-INF/pages/error/usernameorpawdwrong.jsp" />
+        <option value="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/ExceptionHandle.java" />
+        <option value="$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/Request2Privilege.java" />
         <option value="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getuserinfo/getuserinfo-flow.xml" />
+        <option value="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsexchange-flow.xml" />
+        <option value="$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/pojo/PaymentDetails.java" />
+        <option value="$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getpayinfo/getpayinfo-flow.xml" />
       </list>
     </option>
   </component>
@@ -393,6 +391,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1135,11 +1136,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="back" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="back" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1148,26 +1180,26 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;PostgreSQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Administrator/IdeaProjects/web/back/src/main/java/com/jinjiang/web/back/conf/WebAppInitializer.java" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\flows\pointsexchange\getpayinfo" />
+      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\flows\pointsexchange" />
+      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\flows" />
+      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\css" />
+      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\images" />
       <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\js" />
       <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\css" />
       <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp" />
       <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\WEB-INF\pages\index" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\flows\pointsexchange" />
-      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\flows" />
-      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\css" />
-      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp" />
-      <recent name="C:\Users\Administrator\IdeaProjects\web\back\src\main\webapp\css\fonts" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.web">
@@ -1706,7 +1738,8 @@
       <workItem from="1474029167509" duration="4900000" />
       <workItem from="1474105651149" duration="7164000" />
       <workItem from="1474165601511" duration="19304000" />
-      <workItem from="1474200661314" duration="19000" />
+      <workItem from="1474200661314" duration="2487000" />
+      <workItem from="1474255967539" duration="7909000" />
     </task>
     <task id="LOCAL-00001" summary="git push">
       <created>1472876093202</created>
@@ -1750,7 +1783,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474119061493</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="eighth commit:upload function and spring web flow">
+      <created>1474200731143</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1474200731143</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1774,7 +1814,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270137000" />
+    <option name="totallyTimeSpent" value="280514000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1787,23 +1827,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23440135" sideWeight="0.18078668" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08600337" sideWeight="0.18078668" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14069591" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5924617" sideWeight="0.4935275" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979977" sideWeight="0.49676377" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28139183" sideWeight="0.8876652" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28139183" sideWeight="0.1123348" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13388805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2397882" sideWeight="0.8745387" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.077912256" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2397882" sideWeight="0.12546125" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13388805" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1869,7 +1909,8 @@
     <MESSAGE value="git push" />
     <MESSAGE value="fifth commit" />
     <MESSAGE value="eighth commit:upload function" />
-    <option name="LAST_COMMIT_MESSAGE" value="eighth commit:upload function" />
+    <MESSAGE value="eighth commit:upload function and spring web flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="eighth commit:upload function and spring web flow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1882,69 +1923,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/DateConvertion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/Email.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1426">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/SessionOP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2542">
-          <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/WEB-INF/pages/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="36" column="46" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f46bbd1/1f26ead0-ff16-42f1-afee-3fe75d26e80c/sign.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/WEB-INF/pages/index/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2015">
-          <caret line="65" column="83" selection-start-line="65" selection-start-column="83" selection-end-line="65" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/resources/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/javax/servlet/MultipartConfigElement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/StoreUnQulifiedUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -1956,14 +1934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1991,33 +1961,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/ExceptionHandle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back/src/main/resources/message.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2075,17 +2022,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/inf/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/Administrator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2093,6 +2034,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2100,20 +2042,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2128,6 +2057,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2147,18 +2077,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/UserPrivilege.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/inf/UserPrivilegeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2180,21 +2105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsnotenough.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/pojo/PaymentDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/SignServiceImp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -2205,26 +2115,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/UserPrivilegeServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/src/main/java/com/jinjiang/web/dao/mapper/UserPrivilegeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/action/LoginAction.java" />
+    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsnotenough.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/ponitstore.jsp">
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/SessionOP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1426">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/UserNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/ErrorUserNameOrPasswordException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/inf/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/WEB-INF/pages/error/usernameorpawdwrong.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/lang/SuppressWarnings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="899">
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/exception/DuplicateUserNameException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/ExceptionHandle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/src/main/java/com/jinjiang/web/utils/Request2Privilege.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getuserinfo/getuserinfo-flow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Tencent/QQ/Temp/4(`2PX2CW4GD}ZE%FYFOIPX.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/pojo/PaymentDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bean/src/main/java/com/jinjiang/web/bean/bean/UserPrivilege.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/src/main/java/com/jinjiang/web/service/UserPrivilegeServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsexchange-flow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getpayinfo/pointstore.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -2232,24 +2311,7 @@
     <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getpayinfo/getpayinfo-flow.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/pointsexchange-flow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/main/java/com/jinjiang/web/back/action/LoginAction.java" />
-    <entry file="file://$PROJECT_DIR$/back/src/main/webapp/flows/pointsexchange/getuserinfo/getuserinfo-flow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -2333,6 +2395,17 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
