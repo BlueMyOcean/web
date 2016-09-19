@@ -11,6 +11,13 @@
     <title>积分商城</title>
 </head>
 <body>
-
+<form method="get">
+    <input type="hidden" name="_flowExecutionKey" value="${flowExcutionKey}">
+    <label>
+        <input type="text" value="goodnum"/>
+    </label>
+    <br/>
+    <input type="submit" name="_eventId_payinfo_submit" value="get payinfo">
+</form>
 </body>
 </html>

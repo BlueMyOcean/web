@@ -13,7 +13,6 @@
     </subflow-state>
 
 
-
     <subflow-state id="getpayinfo" subflow="pointsexchange/getpayinfo">
         <output name="payinfo" value="payinfo"/>
         <transition on="payinfoReady" to="judgePoints"/>
@@ -38,6 +37,7 @@
    </view-state>
 
     <end-state id="complete" />
+
     <global-transitions>
         <transition on="cancel" to="complete"/>
     </global-transitions>

@@ -42,4 +42,14 @@ public class UserPrivilegeServiceImp implements UserPrivilegeService {
     public void deleteUserPrivilege(String username) {
 
     }
+
+    @Override
+    public PaymentDetails convert(int num) {
+        return null;
+    }
+
+    @Override
+    public UserPrivilege convert(User user) {
+        return null;
+    }
 }

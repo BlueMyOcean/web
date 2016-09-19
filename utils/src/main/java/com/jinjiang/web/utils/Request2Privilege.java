@@ -1,5 +1,6 @@
 package com.jinjiang.web.utils;
 
+import com.jinjiang.web.bean.bean.User;
 import com.jinjiang.web.bean.bean.UserPrivilege;
 import org.springframework.stereotype.Component;
 
@@ -9,8 +10,5 @@ import org.springframework.stereotype.Component;
 @Component
 public class Request2Privilege {
 
-    public UserPrivilege convert(int num)
-    {
-        return null;
-    }
+
 }

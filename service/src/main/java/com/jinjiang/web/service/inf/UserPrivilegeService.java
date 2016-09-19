@@ -14,4 +14,6 @@ public interface UserPrivilegeService {
     void hideUserPrivilege(UserPrivilege userPrivilege);
     void changeUserPrivilege(UserPrivilege userPrivilege);
     void deleteUserPrivilege(String username);
+    PaymentDetails convert(int num);
+    UserPrivilege convert(User user);
 }

@@ -2,8 +2,23 @@
 <flow xmlns="http://www.springframework.org/schema/webflow"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
-<view-state id="pointstore">
-    <
-</view-state>
+
+    <var name="payinfo" class="com.jinjiang.web.bean.pojo.PaymentDetails"/>
+
+    <view-state id="pointstore">
+    <transition on="payinfo_submit" to="getpayinfo"/>
+    </view-state>
+
+    <action-state id="getpayinfo" >
+        <evaluate result="payinfo" expression="userPrivilegeServiceImp.convert(requestParameters.goodnum)"  />
+    </action-state>
+
+    <end-state id="payinfoReady" >
+        <output name="payinfo" />
+            </end-state>
+
+    <global-transitions>
+        <transition on="cancel" to="pointstore" />
+    </global-transitions>
 
 </flow>

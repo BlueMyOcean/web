@@ -4,12 +4,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import javax.validation.constraints.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by W on 2016/8/26.
  */
-public class User {
+public class User implements Serializable{
 
     private Integer id;//默认id
     @Size(min = 2,max=5,message ="姓名必须为4到10个字节，自己猜多少个字-。-")

@@ -176,6 +176,7 @@
 			</div>
 			<div class="col-md-8">
 				<form class="form-horizontal" action="${pageContext.request.contextPath}/user/login" method="post">
+					<input type="hidden" name="_flowExecutionKey" value="${flowExcutionKey}">
 					<div class="form-group">
 						<label class="control-label col-md-3 col-sm-3" >用户名：</label>
 						<div class="col-md-8 col-sm-8">
@@ -200,7 +201,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-						<input type="submit" class="btn btn-primary" value="登录"/>
+						<input type="submit" name="_eventId_login" class="btn btn-primary" value="登录"/>
 					</div>
 
 				</form>
