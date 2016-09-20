@@ -31,6 +31,12 @@
 
         <dependency>
             <groupId>com.jinjiang.web</groupId>
+            <artifactId>task</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jinjiang.web</groupId>
             <artifactId>dao</artifactId>
             <version>${project.version}</version>
         </dependency>

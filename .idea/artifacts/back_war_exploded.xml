@@ -15,6 +15,9 @@
           <element id="archive" name="service-1.0-SNAPSHOT.jar">
             <element id="module-output" name="service" />
           </element>
+          <element id="archive" name="task-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="task" />
+          </element>
           <element id="archive" name="dao-1.0-SNAPSHOT.jar">
             <element id="module-output" name="dao" />
           </element>

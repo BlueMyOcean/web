@@ -1,21 +1,20 @@
 package com.jinjiang.web.dao.mapper;
 
 import com.jinjiang.web.bean.bean.UserPrivilege;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 /**
  * Created by Administrator on 2016/9/18 0018.
  */
 public interface UserPrivilegeMapper {
-    @Update("")
+    @Update("update user_privilege set username = #{username},level=#{level},hardwork=#{hardwork} where username =#{username}")
     public void changePrivilege(UserPrivilege userPrivilege);//修改用户权限
-    @Select("")
-    public UserPrivilege getPrivilege();
-    @Insert("")
-    public void insertPrivilege();
-    @Delete("")
-    public void deletePrivilege();
+    @Select("select username,level,hardwork from user_privilege where username=#{username}")
+    public UserPrivilege getPrivilege(@Param("username")String username);
+    @Insert("insert into user_privilege(username,level,hardwork) values(#{username},#{level},#{hardwork})")
+    public void insertPrivilege(UserPrivilege userPrivilege);
+    @Delete("delete from user_privilege where username =#{username}")
+    public void deletePrivilege(@Param("username")String username);
+    @Insert("insert into user_privilege(username,level,hardwork) values(0,9,0)")
+    public void createPrivilege();
 }

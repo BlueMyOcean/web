@@ -39,6 +39,7 @@
     <orderEntry type="library" name="Maven: javax.mail:javax.mail-api:1.4.6" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1.1" level="project" />
     <orderEntry type="module" module-name="service" />
+    <orderEntry type="module" module-name="task" />
     <orderEntry type="module" module-name="dao" />
     <orderEntry type="module" module-name="bean" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.1.6.RELEASE" level="project" />

@@ -5,9 +5,9 @@
 
     <var class="com.jinjiang.web.bean.bean.UserPrivilege" name="privilegeinfo"/>
 
-    <view-state id="index/index">
+    <view-state id="index" view="index/index">
         <transition on="login" to="getPrivilegeInfo" />
-        <transition on-exception="com.jinjiang.web.exception.ErrorUserNameOrPasswordException" to="index/index" />
+        <transition on-exception="com.jinjiang.web.exception.ErrorUserNameOrPasswordException" to="index" />
     </view-state>
 
     <action-state id="getPrivilegeInfo" >

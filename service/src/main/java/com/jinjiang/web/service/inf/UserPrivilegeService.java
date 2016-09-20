@@ -9,7 +9,7 @@ import com.jinjiang.web.bean.pojo.PaymentDetails;
  */
 public interface UserPrivilegeService {
     boolean judgePoints(PaymentDetails paymentDetails, User user);
-    void addUserPrivilege(PaymentDetails paymentDetails,UserPrivilege userPrivilege);
+    void setUserPrivilege(PaymentDetails paymentDetails,UserPrivilege userPrivilege);
     void queryUserPrivilege(String username);
     void hideUserPrivilege(UserPrivilege userPrivilege);
     void changeUserPrivilege(UserPrivilege userPrivilege);

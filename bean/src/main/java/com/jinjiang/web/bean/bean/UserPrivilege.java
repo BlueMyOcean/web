@@ -10,7 +10,7 @@ public class UserPrivilege implements Serializable{
     private String username;
     //权限等级
     private int level;
-    //连续签到天数>200
+    //连续签到天数>200use
     private boolean hardwork;
 
     public int getLevel() {
