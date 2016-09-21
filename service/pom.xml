@@ -17,6 +17,12 @@
             <artifactId>dao</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.jinjiang.web</groupId>
+            <artifactId>utils</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 

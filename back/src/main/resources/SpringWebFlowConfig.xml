@@ -24,7 +24,7 @@
 
     <!-- The registry of executable flow definitions -->
     <flow:flow-registry id="flowRegistry"
-                        base-path="/flows">
+                        base-path="/WEB-INF/pages/flows">
         <flow:flow-location-pattern value="/**/*-flow.xml" />
     </flow:flow-registry>
 

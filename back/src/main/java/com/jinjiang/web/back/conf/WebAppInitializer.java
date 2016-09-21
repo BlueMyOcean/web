@@ -15,7 +15,7 @@ import javax.servlet.ServletRegistration;
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{ReaderConfig.class,DatabaseConfig.class,RootConfig.class};
+        return new Class[]{ReaderConfig.class,DatabaseConfig.class};
     }
 
     @Override

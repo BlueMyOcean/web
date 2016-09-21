@@ -25,7 +25,7 @@
     </decision-state>
 
     <action-state id="savePrivilege" >
-        <evaluate expression="userPrivilegeServiceImp.addUserPrivilege(payinfo,userinfo)" />
+        <evaluate expression="userPrivilegeServiceImp.perchaseUserPrivilege(payinfo,userinfo)" />
     </action-state>
 
     <view-state id="pointsnotenough">

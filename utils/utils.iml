@@ -12,7 +12,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="bean" />
-    <orderEntry type="module" module-name="dao" />
     <orderEntry type="library" name="Maven: javax.mail:javax.mail-api:1.4.6" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />

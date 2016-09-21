@@ -3,6 +3,7 @@ package com.jinjiang.web.back.controller;
 import com.jinjiang.web.bean.bean.User;
 import com.jinjiang.web.exception.DuplicateUserNameException;
 import com.jinjiang.web.exception.ErrorUserNameOrPasswordException;
+import com.jinjiang.web.exception.UserNotFoundException;
 import com.jinjiang.web.service.UserServiceImp;
 import com.jinjiang.web.utils.SessionOP;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,13 +69,13 @@ public class UserController {
         else
         {
             model.addAttribute(username);
-            return "404";
+            throw new UserNotFoundException();
         }
     }
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public String login(@RequestParam("username") String username,
-                        @RequestParam("password") String password, HttpServletRequest request,Model model)throws  ErrorUserNameOrPasswordException
+                        @RequestParam("password") String password, HttpServletRequest request,Model model)
     {
         User checkUser = new User();
         checkUser.setUsername(username);

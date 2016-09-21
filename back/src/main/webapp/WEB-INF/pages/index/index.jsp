@@ -37,6 +37,7 @@
         <% } else{%>
         <li><a  id="logout"  data-toggle="modal" data-backdrop="static" href="<s:url value="/user/logout"/>"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
         <li><a  id="nickname"  data-toggle="modal" data-backdrop="static" href=" <s:url value="/user/{username}"><s:param name="username" value="<%=username%>"/> </s:url> "><span class="glyphicon glyphicon-user"></span><%= name%></a></li>
+		<li><a  id="shop"  data-toggle="modal" data-backdrop="static" href="<s:url value="/shop"/>"><span class="glyphicon glyphicon-shopping-cart"></span>商店</a></li>
         <%}%>
 	<li><a href="/" class="active">首页</a></li>
 	</ul>

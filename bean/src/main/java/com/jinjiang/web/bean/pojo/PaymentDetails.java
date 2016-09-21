@@ -11,7 +11,7 @@ public class PaymentDetails implements Serializable{
     //权限等级
     private int level;
     //连续签到天数>200
-    private boolean hardwork;
+    private int hardwork;
 
     public int getLevel() {
         return level;
@@ -21,11 +21,11 @@ public class PaymentDetails implements Serializable{
         this.level = level;
     }
 
-    public boolean isHardwork() {
+    public int getHardwork() {
         return hardwork;
     }
 
-    public void setHardwork(boolean hardwork) {
+    public void setHardwork(int hardwork) {
         this.hardwork = hardwork;
     }
 }

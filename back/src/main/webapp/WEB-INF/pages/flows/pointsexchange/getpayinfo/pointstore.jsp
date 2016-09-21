@@ -14,7 +14,7 @@
 <form method="get">
     <input type="hidden" name="_flowExecutionKey" value="${flowExcutionKey}">
     <label>
-        <input type="text" value="goodnum"/>
+        <input type="text" value="1" name="goodnum"/>
     </label>
     <br/>
     <input type="submit" name="_eventId_payinfo_submit" value="get payinfo">
