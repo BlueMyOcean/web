@@ -9,10 +9,8 @@
 <h2>欢迎来到积分商城</h2>
 
 <form:form>
-    <input type="hidden" name="_flowExecutionKey"
-           value="${flowExecutionKey}"/>
     <input type="text" value="1" name="goodnum"/><br/>
-    <input type="submit" name="_eventId_payinfo_submit" value="payinfo_submit" />
+    <input type="submit" />
 </form:form>
 </body>
 </html>

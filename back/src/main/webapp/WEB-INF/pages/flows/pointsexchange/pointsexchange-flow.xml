@@ -7,11 +7,10 @@
     <var name="userinfo" class="com.jinjiang.web.bean.bean.UserPrivilege"/>
     <var name="payinfo" class="com.jinjiang.web.bean.pojo.PaymentDetails"/>
 
-    <subflow-state id="getuserinfo" subflow="pointsexchange/getuserinfo">
-        <output name="userinfo" value="payinfo"/>
-        <transition on="userinfoReady" to="getpayinfo"/>
-    </subflow-state>
-
+    <decision-state id="isLogin">
+        <if test="externalContext.nativeRequest.session.user!=null"
+            then="getpayinfo" else="isLogin"/>
+    </decision-state>
 
     <subflow-state id="getpayinfo" subflow="pointsexchange/getpayinfo">
         <output name="payinfo" value="payinfo"/>

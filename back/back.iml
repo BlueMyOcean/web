@@ -19,7 +19,6 @@
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <dependency>initializer com.jinjiang.web.back.conf.WebAppInitializer root context</dependency>
-          <file>file://$MODULE_DIR$/src/main/resources/SpringWebFlowConfig.xml</file>
         </fileset>
       </configuration>
     </facet>

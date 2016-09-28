@@ -31,8 +31,9 @@ public class UserServiceImp implements UserService{
                 System.out.printf("登录失败,不存在该用户！");
                 return null;
             }
-            if (localuser.getPassword().equals(user.getPassword()))
+            if (localuser.getPassword().equals(user.getPassword())) {
                 return localuser;
+            }
             else
                 return null;
     }

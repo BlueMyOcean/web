@@ -1,10 +1,12 @@
 package com.jinjiang.web.back.controller;
 
 import com.jinjiang.web.bean.bean.User;
+import com.jinjiang.web.bean.bean.UserPrivilege;
 import com.jinjiang.web.exception.DuplicateUserNameException;
 import com.jinjiang.web.exception.ErrorUserNameOrPasswordException;
 import com.jinjiang.web.exception.UserNotFoundException;
 import com.jinjiang.web.service.UserServiceImp;
+import com.jinjiang.web.service.inf.UserPrivilegeService;
 import com.jinjiang.web.utils.SessionOP;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +28,8 @@ import java.util.Date;
 @RequestMapping("/user")
 public class UserController {
 
+    @Autowired
+    private UserPrivilegeService userPrivilegeService;
     private SessionOP sessionOP;
     @Autowired
     public void setSessionOP(SessionOP sessionOP)
@@ -50,10 +54,16 @@ public class UserController {
         user.setPernature("无");
         user.setPoint(0);
         user.setRegisterdate(new Date());
+        UserPrivilege userPrivilege = new UserPrivilege();
+        userPrivilege.setHardwork(0);
+        userPrivilege.setUsername(user.getUsername());
+        userPrivilege.setLevel(9);
+
 
         if(userServiceImp.Register(user)==null)
             throw new DuplicateUserNameException();
 
+        userPrivilegeService.createUserPrivilege(userPrivilege);
         sessionOP.setSession(user,request);
         return "redirect:/user/"+user.getUsername();
     }
@@ -94,9 +104,15 @@ public class UserController {
     @RequestMapping(value = "/logout",method = RequestMethod.GET)
     public String logout(HttpServletRequest request,Model model)
     {
-
         sessionOP.destroySession(request);
         model.addAttribute(new User());
         return "redirect:/";
     }
+
+    @RequestMapping(value = "wronguser")
+    public String wronguser()
+    {
+        return "errors/wronguser";
+    }
+
 }

@@ -32,7 +32,7 @@ public class UserPrivilegeServiceImp implements UserPrivilegeService {
             return false;
         int points = user.getPoint();
         int haves = privilegeRules.computNeed(paymentDetails,userPrivilegeMapper.getPrivilege(user.getUsername()));
-        return points <= haves;
+        return haves - points > 0;
     }
 
     @Override//积分购买
@@ -40,14 +40,14 @@ public class UserPrivilegeServiceImp implements UserPrivilegeService {
     public void perchaseUserPrivilege(PaymentDetails paymentDetails,UserPrivilege userPrivilege) {
         int minusPoint = privilegeRules.computNeed(paymentDetails,userPrivilege);
         User user = userMapper.findUserByUsername(userPrivilege.getUsername());
-        try {
+       // try {
             user.setPoint(user.getPoint() - minusPoint);
             userMapper.UpdateUser(user);
             userPrivilegeMapper.changePrivilege(privilegeRules.changePrivilege(paymentDetails,userPrivilege));
-        }catch (Exception e)
-        {
-            System.out.println("用户不存在！购买失败！");
-        }
+      //  }catch (Exception e)
+//        {
+    //        System.out.println("用户不存在！购买失败！");
+     //   }
 
     }
 

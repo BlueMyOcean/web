@@ -36,7 +36,17 @@ public class User implements Serializable{
     private String password;//密码
     @Size(max=50,message ="{pernature.size}")
     private String pernature;//个性签名
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
     @NotNull
+
     @Size(max = 50,message = "邮箱都没有？太low了吧！= =")
     private String email;//邮箱
     @Size(max=13,message = "你的QQ号一定是珍惜物种0 0！小于5位和大于13位的QQ号我还没见过！")
@@ -107,14 +117,6 @@ public class User implements Serializable{
 
     public void setSex(String sex) {
         this.sex = sex;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
     }
 
     public String getUsername() {

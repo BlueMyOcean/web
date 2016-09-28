@@ -14,7 +14,9 @@ public class PrivilegeRules {
     {
         int sum = 0;
 
-        if(paymentDetails.getHardwork()==1&&userPrivilege.getHardwork()==0)
+
+        if(paymentDetails.getHardwork()==1)
+            if(userPrivilege.getHardwork()==0)
         {
             sum+=200;
         }

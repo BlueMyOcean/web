@@ -2,6 +2,7 @@ package com.jinjiang.web.back.controller;
 
 import com.jinjiang.web.exception.DuplicateUserNameException;
 import com.jinjiang.web.exception.ErrorUserNameOrPasswordException;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -17,13 +18,17 @@ public class ExceptionHandle {
     @RequestMapping(method = RequestMethod.GET)
     public String duplicateUserNameException()
     {
-        return "redirect:error/userexisted";
+        return "error/userexisted";
     }
 
     @ExceptionHandler(ErrorUserNameOrPasswordException.class)
     @RequestMapping(method = RequestMethod.GET)
     public String errorUserNameOrPasswordException()
     {
-        return "redirect:error/usernameorpawdwrong";
+        return "redirect:wronguser";
     }
+
+
+
+
 }
