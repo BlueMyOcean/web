@@ -47,7 +47,7 @@
 
 		<div id="search">
 			<input type="text" id="input" />
-			<button type="button" onclick=baidu()>搜索一下</button>
+			<button type="button" id="enter" value="enter" onclick=baidu()>搜索一下</button>
 		</div>
 
 <div id="registerModal" class="modal fade">

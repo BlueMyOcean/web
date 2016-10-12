@@ -2,20 +2,20 @@ package com.jinjiang.web.back.controller;
 
 import com.jinjiang.web.bean.bean.User;
 import com.jinjiang.web.bean.bean.UserPrivilege;
+import com.jinjiang.web.dao.mapper.SignMapper;
 import com.jinjiang.web.exception.DuplicateUserNameException;
 import com.jinjiang.web.exception.ErrorUserNameOrPasswordException;
 import com.jinjiang.web.exception.UserNotFoundException;
 import com.jinjiang.web.service.UserServiceImp;
+import com.jinjiang.web.service.inf.SignService;
 import com.jinjiang.web.service.inf.UserPrivilegeService;
+import com.jinjiang.web.service.inf.UserService;
 import com.jinjiang.web.utils.SessionOP;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -29,6 +29,9 @@ import java.util.Date;
 public class UserController {
 
     @Autowired
+    private SignService signService;
+
+    @Autowired
     private UserPrivilegeService userPrivilegeService;
     private SessionOP sessionOP;
     @Autowired
@@ -36,11 +39,12 @@ public class UserController {
     {
         this.sessionOP = sessionOP;
     }
-    private UserServiceImp userServiceImp;
+
+    private UserService userService;
     @Autowired
-    public void setUserServiceImp(UserServiceImp userServiceImp)
+    public void setUserServiceImp(UserService userService)
     {
-        this.userServiceImp = userServiceImp;
+        this.userService = userService;
     }
 
     @RequestMapping(value = "/register",method = RequestMethod.POST)
@@ -60,18 +64,26 @@ public class UserController {
         userPrivilege.setLevel(9);
 
 
-        if(userServiceImp.Register(user)==null)
+        if(userService.Register(user)==null)
             throw new DuplicateUserNameException();
 
         userPrivilegeService.createUserPrivilege(userPrivilege);
         sessionOP.setSession(user,request);
+        signService.signData(user.getUsername(),new Date(),request.getRemoteAddr());
         return "redirect:/user/"+user.getUsername();
+    }
+
+    @RequestMapping(value = "/userchange",method =  RequestMethod.POST)
+    @ResponseBody
+    public void changeUserInfo()
+    {
+
     }
 
     @RequestMapping(value = "/{username}",method = RequestMethod.GET)
     public String showUserInfo(@PathVariable String username, Model model)
     {
-        User user = userServiceImp.FindUser(username);
+        User user = userService.FindUser(username);
         if(user!=null) {
             model.addAttribute(user);
             return "userinfo";
@@ -90,10 +102,11 @@ public class UserController {
         User checkUser = new User();
         checkUser.setUsername(username);
         checkUser.setPassword(password);
-        User getUser = userServiceImp.Login(checkUser);
+        User getUser = userService.Login(checkUser);
         if(getUser != null) {
             sessionOP.setSession(getUser,request);
             model.addAttribute("user",getUser);
+            signService.signData(getUser.getUsername(),new Date(),request.getRemoteAddr());
             return "redirect:/";
         }
         else {

@@ -16,6 +16,16 @@ public class Message {
     private String sender;//发送人
     private String geter;//接收人
 
+    public boolean isread() {
+        return isread;
+    }
+
+    public void setIsread(boolean isread) {
+        this.isread = isread;
+    }
+
+    private boolean isread;//是否已读
+
     public Message(Long id, String message, Date time, String sender, String geter) {
         this.id = id;
         this.message = message;
