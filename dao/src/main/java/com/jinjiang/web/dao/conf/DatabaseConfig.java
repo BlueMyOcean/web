@@ -19,7 +19,6 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 public class DatabaseConfig {
-
      //   private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
 
         @Value("${jdbc.driver}")//驱动

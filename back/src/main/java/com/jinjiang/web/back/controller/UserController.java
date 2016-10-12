@@ -25,29 +25,29 @@ import java.util.Date;
  * Created by Administrator on 2016/9/13 0013.
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/user")//   /user映射的处理器
 public class UserController {
 
     @Autowired
-    private SignService signService;
+    private SignService signService;//签到的业务层
 
     @Autowired
-    private UserPrivilegeService userPrivilegeService;
-    private SessionOP sessionOP;
+    private UserPrivilegeService userPrivilegeService;//用户特权的业务层
+    private SessionOP sessionOP;//封装的session工具
     @Autowired
     public void setSessionOP(SessionOP sessionOP)
     {
         this.sessionOP = sessionOP;
     }
 
-    private UserService userService;
+    private UserService userService;//用户业务层
     @Autowired
     public void setUserServiceImp(UserService userService)
     {
         this.userService = userService;
     }
 
-    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    @RequestMapping(value = "/register",method = RequestMethod.POST)//处理用户注册的映射  post方法
     public String regist(@Valid User user, Errors errors , HttpServletRequest request) throws  DuplicateUserNameException
     {
         if(errors.hasErrors())
@@ -86,7 +86,7 @@ public class UserController {
         User user = userService.FindUser(username);
         if(user!=null) {
             model.addAttribute(user);
-            return "userinfo";
+            return "user/user_info";
         }
         else
         {

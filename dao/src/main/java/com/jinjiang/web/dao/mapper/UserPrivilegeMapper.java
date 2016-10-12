@@ -1,6 +1,7 @@
 package com.jinjiang.web.dao.mapper;
 
 import com.jinjiang.web.bean.bean.UserPrivilege;
+import netscape.security.Privilege;
 import org.apache.ibatis.annotations.*;
 
 /**
@@ -15,6 +16,6 @@ public interface UserPrivilegeMapper {
     public void insertPrivilege(UserPrivilege userPrivilege);
     @Delete("delete from user_privilege where username =#{username}")
     public void deletePrivilege(@Param("username")String username);
-    @Insert("insert into user_privilege(username,level,hardwork) values(0,9,0)")
-    public void createPrivilege();
+    @Insert("insert into user_privilege(username,level,hardwork) values(#{username},#{level},#{hardwork})")
+    public void createPrivilege(UserPrivilege privilege);
 }

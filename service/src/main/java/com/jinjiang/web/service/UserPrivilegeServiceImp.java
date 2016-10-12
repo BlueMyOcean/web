@@ -65,7 +65,7 @@ public class UserPrivilegeServiceImp implements UserPrivilegeService {
     @Override//创建权限
     @Transactional
     public void createUserPrivilege(UserPrivilege userPrivilege) {
-        userPrivilegeMapper.createPrivilege();
+        userPrivilegeMapper.createPrivilege(userPrivilege);
     }
 
     @Override//删除权限

@@ -29,8 +29,8 @@
 	<ul>
 	<li><a href="${pageContext.request.contextPath}/WEB-INF/pages/index2.html">更多</a></li>
         <%! String name;String username;%>
-        <%= name= (String) session.getAttribute("nickname")%>
-        <%=username = (String)session.getAttribute("username")%>
+        <% name= (String) session.getAttribute("nickname");%>
+        <% username = (String)session.getAttribute("username");%>
         <% if (name==null){ %>
 	<li><a  id="register"  data-toggle="modal" data-backdrop="static" data-target="#registerModal"><span class="glyphicon glyphicon-user"></span>注册</a></li>
 	<li><a id="logon" data-toggle="modal" data-backdrop="static" data-target="#logonModal"><span class="glyphicon glyphicon-log-in"></span> 登陆</a></li>

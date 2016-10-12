@@ -1,0 +1,241 @@
+body,#header ul{
+	margin: 0;
+	padding: 0;
+	background:#F0F0F0;
+}
+
+#header{
+	width: 100%;
+	min-width: 800px;
+	height: 40px;
+	background: black;
+}
+#header ul{
+	margin: 0 0 0 50px;
+}
+
+#header ul li{
+	list-style: none;
+	float: left;
+	color:#8E8E8E;
+	width: 50px;
+	line-height: 40px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	margin:0 2px;
+}
+#header ul li:hover{
+	background:#3C3C3C;
+	color: white;
+}
+#header .name{
+	float: right;
+	color: #8E8E8E;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 100px 0 0;
+	
+}
+#outlook{
+	min-width: 800px;
+}
+
+#outlook .outlook_img{
+	width: 100%;
+	height: 200px;
+}
+
+#outlook .touxiang{
+	position: absolute;
+	width: 80px;
+	left: 60px;
+	top: 95px;
+	border-radius: 50%;
+}
+#outlook .title{
+	position: absolute;
+	color: white;
+	font-size: 28px;
+	left: 150px;
+	top: 95px;
+}
+
+#outlook .shoucang{
+	position: absolute;
+	font-size: 14px;
+	color:#d0d0d0;
+	left: 290px;
+	top: 115px;
+}
+
+#outlook .good_say{
+	position: absolute;
+	font-size: 13px;
+	color:#d0d0d0;
+	right: 180px;
+	top: 150px;
+}
+#outlook .weather{
+	position: absolute;
+	right: 75px;
+	top: 100px;
+	}
+
+#information{
+	float: left;
+	position: relative;
+	margin: 2% 2%;
+	width: 500px;
+	background: white;
+	box-shadow: 0 1px 20px 10px rgba(0,0,0,0.1);
+	height: 500px;
+}
+
+#information .head{
+border-bottom: 1px dashed #d0d0d0;
+font-weight: normal;
+letter-spacing: 1px;
+font-size: 17px;
+padding: 10px;
+}
+
+#information p{
+text-indent: 25px;
+line-height: 20px;
+}
+#information p textarea{
+		width: 250px;
+		height: 50px;
+border: 1px solid #ADADAD;
+}
+
+#information input{
+	border: 1px solid #ADADAD;
+	border-radius: 4px;
+	height: 25px;
+}
+
+#information .sex{
+	width: 60px;
+	border: 1px solid #ADADAD;
+}
+#information .username{
+	width: 250px;
+}
+#information .pswd,#information .email{
+	width: 258px;
+}
+#information .qq{
+	width: 273px;
+}
+#information .submit{
+	width: 100px;
+	height: 40px;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	background: white;
+	cursor: pointer;
+	cursor:#BEBEBE;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+}
+#news{
+	width:600px;
+	height: 500px;
+	float: right;
+	position: relative;
+	margin: 2% 2%;
+	background: white;
+	box-shadow: 0 1px 20px 10px rgba(0,0,0,0.1);
+}
+#news h2{
+border-bottom: 1px dashed #d0d0d0;
+letter-spacing: 1px;
+font-size: 20px;
+padding: 10px;
+}
+#news .part{
+	width:580px;
+	margin:10px 7px;
+	border-radius: 3px;
+	height: 120px;
+	position: relative;
+	border: 1px solid #d0d0d0;
+	}
+#news .part img{
+	margin: 5px 0 0 5px;
+	width: 150px;
+	height: 110px;
+	float: left;
+}
+#news .part h3{
+	text-indent: 10px;
+	width: 60%;
+	color: #5B5B5B;
+	font-size: 17px;
+	float: left;
+	margin: 10px 0 10px 0;
+	padding: 0;
+white-space:nowrap; 
+text-overflow:ellipsis; 
+-o-text-overflow:ellipsis; 
+overflow:hidden;
+}
+#news .part p{
+text-indent: 10px;
+font-size: 15px;
+color:#7B7B7B;
+margin: 0 0 0 10px;
+padding: 0;
+float:left;
+width: 60%;
+
+}
+#news .hot{
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	color: orangered;
+	font-size: 14px;
+	border: 1px solid orangered;
+	border-radius: 2px;
+}
+#news .early{
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	color: green;
+	font-size: 14px;
+	border: 1px solid green;
+	border-radius: 2px;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 960px) {
+	#outlook .weather,#outlook .good_say{
+		display: none;
+	}
+#outlook .touxiang{
+	left:30%;
+	top: 15%;
+}
+#outlook .title{
+	left:42%;
+	top: 15%;
+}
+#outlook .shoucang{
+	left:59%;
+	top: 18%;
+}
+}
+@media only screen and (min-width: 100px) and (max-width: 800px) {
+		#outlook .weather,#outlook .good_say,#outlook .title,#outlook .shoucang{
+		display: none;
+	}
+	#outlook .touxiang{
+	left:50%;
+	top: 15%;
+}
+}
