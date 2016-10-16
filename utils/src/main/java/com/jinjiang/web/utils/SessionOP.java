@@ -40,7 +40,7 @@ public class SessionOP {
         session.setAttribute("qq",user.getQq());
         session.setAttribute("point",user.getPoint());
         session.setAttribute("registerdate",user.getRegisterdate());
-        session.setAttribute("ipaddress",user.getIpadress());
+        session.setAttribute("ipadress",user.getIpadress());
         session.setMaxInactiveInterval(1 * 60 * 60);
     }
 
@@ -54,11 +54,13 @@ public class SessionOP {
         String major = (String) session.getAttribute("maojor");
         String grade = (String) session.getAttribute("grade");
         String clas = (String) session.getAttribute("clas");
+
         String sex;
         if(session.getAttribute("sex")!=null)
         sex = (String) session.getAttribute("sex");
         else
         sex="";
+
         String nickname = (String) session.getAttribute("nickname");
         String username = (String) session.getAttribute("username");
         String password = (String) session.getAttribute("password");
@@ -72,6 +74,9 @@ public class SessionOP {
         Integer point = (Integer) session.getAttribute("id");
         Date registerdate = (Date)session.getAttribute("registerdate");
         String ipadress = (String)session.getAttribute("ipadress");
+
+        System.out.println("我拿到的ip地址是："+(String)session.getAttribute("ipadress"));
+
         if(username!=null)
         {
             user.setId(id);

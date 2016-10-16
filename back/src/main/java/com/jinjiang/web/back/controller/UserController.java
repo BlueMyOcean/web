@@ -10,6 +10,7 @@ import com.jinjiang.web.service.UserServiceImp;
 import com.jinjiang.web.service.inf.SignService;
 import com.jinjiang.web.service.inf.UserPrivilegeService;
 import com.jinjiang.web.service.inf.UserService;
+import com.jinjiang.web.utils.AutoAnalysis;
 import com.jinjiang.web.utils.SessionOP;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,6 +28,9 @@ import java.util.Date;
 @Controller
 @RequestMapping("/user")//   /user映射的处理器
 public class UserController {
+
+    @Autowired
+    private AutoAnalysis autoAnalysis;
 
     @Autowired
     private SignService signService;//签到的业务层
@@ -50,6 +54,7 @@ public class UserController {
     @RequestMapping(value = "/register",method = RequestMethod.POST)//处理用户注册的映射  post方法
     public String regist(@Valid User user, Errors errors , HttpServletRequest request) throws  DuplicateUserNameException
     {
+        user = autoAnalysis.Analysis(user);
         if(errors.hasErrors())
         {
             return "index/index";
@@ -71,13 +76,6 @@ public class UserController {
         sessionOP.setSession(user,request);
         signService.signData(user.getUsername(),new Date(),request.getRemoteAddr());
         return "redirect:/user/"+user.getUsername();
-    }
-
-    @RequestMapping(value = "/userchange",method =  RequestMethod.POST)
-    @ResponseBody
-    public void changeUserInfo()
-    {
-
     }
 
     @RequestMapping(value = "/{username}",method = RequestMethod.GET)
@@ -103,6 +101,7 @@ public class UserController {
         checkUser.setUsername(username);
         checkUser.setPassword(password);
         User getUser = userService.Login(checkUser);
+       // System.out.println("登录拿到的ip地址："+getUser.getIpadress());
         if(getUser != null) {
             sessionOP.setSession(getUser,request);
             model.addAttribute("user",getUser);
@@ -114,6 +113,12 @@ public class UserController {
         }
     }
 
+    /**
+     *
+     * @param request 获取session
+     * @param model 传数据到前端
+     * @return 返回退出后的页面
+     */
     @RequestMapping(value = "/logout",method = RequestMethod.GET)
     public String logout(HttpServletRequest request,Model model)
     {
@@ -122,10 +127,65 @@ public class UserController {
         return "redirect:/";
     }
 
+    /**
+     *
+     * @return 用户账号或密码错误
+     */
     @RequestMapping(value = "wronguser")
     public String wronguser()
     {
         return "errors/wronguser";
     }
+
+    /**
+     *
+     * @param user 前台传过来的json
+     * @param request 获取session的请求
+     * @return 返回数据更新后的json
+     */
+    @RequestMapping(value = "update",method = RequestMethod.POST,consumes="application/json")
+    @ResponseBody
+    public User change(@RequestBody User user,HttpServletRequest request)
+    {
+        User olduser = sessionOP.getSession(request);
+        User tem=null;
+
+        try {
+            tem = olduser.clone();
+
+            tem.setName(user.getName());
+            tem.setSex(user.getSex());
+            tem.setSno(user.getSno());
+            tem.setMajor(user.getMajor());
+            tem.setGrade(user.getGrade());
+            tem.setClas(user.getClas());
+            tem.setQq(user.getQq());
+            tem.setEmail(user.getEmail());
+            System.out.println("====================");
+            System.out.println(tem.getIpadress());
+            System.out.println("====================");
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+
+      //  System.out.println(user);
+        User newUser =null;
+        if(tem!=null) {
+            System.out.println("====================");
+            System.out.println(tem);
+            System.out.println("====================");
+            newUser = userService.Change(tem);
+
+
+        }
+
+        if(newUser!=null) {
+            sessionOP.setSession(newUser, request);
+            return newUser;
+        }
+        else
+            return olduser;
+    }
+
 
 }

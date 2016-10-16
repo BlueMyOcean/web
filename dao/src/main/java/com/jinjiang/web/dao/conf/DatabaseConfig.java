@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 public class DatabaseConfig {
-     //   private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
+        private static final Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
 
         @Value("${jdbc.driver}")//驱动
         private String jdbcDriver;
@@ -44,7 +44,7 @@ public class DatabaseConfig {
 
         @Bean(destroyMethod = "close")
         public DataSource dataSource() {
-   //         logger.info("mysql url:"+dbUrl);
+            logger.info("mysql url:"+dbUrl);
             BasicDataSource dataSource = new BasicDataSource();
             dataSource.setDriverClassName(jdbcDriver);
             dataSource.setUrl(dbUrl);

@@ -7,6 +7,9 @@
           <element id="module-output" name="back" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.7.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.7.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.7.3" />
           <element id="archive" name="utils-1.0-SNAPSHOT.jar">
             <element id="module-output" name="utils" />
           </element>
